@@ -6,6 +6,7 @@ grey #a6a6a6
 white #fdfdfd */
 
 .calc {
+    margin: auto;
     width: 300px;
     height: 500px;
     border: 1px solid #000;
@@ -14,4 +15,6 @@ white #fdfdfd */
     color: #fff;
     font-family: 'Comforter', cursive;
     font-family: 'Caveat', cursive;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f ; /* размытие, отступы, цвет */
 }
