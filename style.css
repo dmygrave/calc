@@ -12,6 +12,22 @@
     box-shadow: 4px 4px 4px #4f4f4f ; /* размытие, отступы */
 }
 
+.calc-screen {
+     height: 130px;
+     padding: 10px;
+     display: grid;  /* чтобы переместить ноль в нижний правый угол */
+     justify-items: end;
+     align-items: end;
+     margin-bottom: 20px;
+}
+
+.calc-screen p {
+    font-size: 4em;
+    margin: 0;
+    
+}
+    
+
 .buttons {
     display: grid;
     grid-template-areas: 
@@ -19,7 +35,7 @@
     "seven eight nine multi"
     "four five six minus"
     "one two three plus"
-    "zero zero dot equal";
+    "zero zero dot equal";  /*две ячейки zero, чтобы потом сделать кнопку широкой */
     grid-gap: 8px;
     justify-items: center; /* чтобы кнопки не прижимались к левой части */
 }
@@ -34,6 +50,12 @@
     font-size: larger;
     cursor: pointer;      /* чтобы изменился указатель курсора при наведении */
     user-select: none;     /* и чтобы нельзя было выбрать текст (цифры)  */
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 40px;
 }
 
 .btn:hover {        /* для засветления при наведении курсором */
@@ -51,4 +73,5 @@
 .btn.bg-orange {
     background: orange;
 }
+
 
