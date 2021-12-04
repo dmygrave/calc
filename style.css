@@ -1,10 +1,3 @@
-
-/* colors
-bg #000
-orange #ff9501
-grey #a6a6a6
-white #fdfdfd */
-
 .calc {
     margin: auto;
     width: 300px;
@@ -16,5 +9,46 @@ white #fdfdfd */
     font-family: 'Comforter', cursive;
     font-family: 'Caveat', cursive;
     padding: 18px;
-    box-shadow: 4px 4px 4px #4f4f4f ; /* размытие, отступы, цвет */
+    box-shadow: 4px 4px 4px #4f4f4f ; /* размытие, отступы */
 }
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "ac plus-minus percent division"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 8px;
+    justify-items: center; /* чтобы кнопки не прижимались к левой части */
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 55%;
+    text-align: center;
+    line-height: 60px;
+    font-size: larger;
+    cursor: pointer;      /* чтобы изменился указатель курсора при наведении */
+    user-select: none;     /* и чтобы нельзя было выбрать текст (цифры)  */
+}
+
+.btn:hover {        /* для засветления при наведении курсором */
+    filter: brightness(150%);
+}
+
+.btn:active {
+    filter: brightness(60%);  /* затемнить в момент, когда происходит нажатие на кнопку */
+}
+
+.btn.bg-grey {
+    background: grey;
+}
+
+.btn.bg-orange {
+    background: orange;
+}
+
