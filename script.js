@@ -20,3 +20,8 @@ function clearAll () {
 }
 
 document.querySelector('.ac').onclick = clearAll
+
+document.querySelector('.buttons').onclick = (event) => {   //реализация нажатия на кнопку
+    if(!event.target.classList.contains('btn')) return //для безошибочного определения кнопки( чтобы при нажатии в промежуток между кнопками ничего не происходило)
+    if(event.target.classList.contains('ac')) return 
+}
